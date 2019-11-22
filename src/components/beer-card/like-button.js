@@ -1,14 +1,18 @@
-import * as React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const LikeButton = styled.button`
   display: block;
-  background-color: transparent;
+  background: transparent;
   border: none;
   cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+  :active,
+  :focus {
+    outline: none;
+  }
 `;
 
 const Icon = styled.svg`
@@ -19,10 +23,16 @@ const Icon = styled.svg`
   fill: ${props => (props.liked ? "white" : "transparent")};
 `;
 
-const like = (props, handleToggle) => {
+function Like() {
+  const [active, setActive] = useState(false);
+
+  const changeLike = () => {
+    setActive(!active);
+  };
+
   return (
-    <LikeButton onClick={props.action}>
-      <Icon liked={props.liked}>
+    <LikeButton onClick={changeLike}>
+      <Icon liked={active}>
         <path
           id="heart-icon"
           d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
@@ -31,6 +41,6 @@ const like = (props, handleToggle) => {
       </Icon>
     </LikeButton>
   );
-};
+}
 
-export default like;
+export default Like;
