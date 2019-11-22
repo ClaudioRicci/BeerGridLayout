@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { device } from "../../helpers";
 import Image from "../../elements/image";
@@ -38,19 +38,13 @@ const Content = styled.div`
 `;
 
 function Beercard(props) {
-  const [active, setActive] = useState(false);
-
-  // const changeLike = () => {
-  //   setActive(!active);
-  // };
-
   return (
     <BeerCard>
       <Content>
         <Lockup text={props.description} tag="h3" title={props.title} />
       </Content>
       <ImagContainer>
-        <Like liked={active} handleToggle={() => setActive(!active)} />
+        <Like />
         <Image url={props.image} />
       </ImagContainer>
     </BeerCard>

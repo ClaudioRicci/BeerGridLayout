@@ -5,7 +5,7 @@ import "jest-styled-components";
 
 const LikeButton = styled.button`
   display: block;
-  background-color: transparent;
+  background: transparent;
   border: none;
   cursor: pointer;
   position: absolute;
@@ -16,5 +16,5 @@ const LikeButton = styled.button`
 test("it works", () => {
   const tree = renderer.create(<LikeButton />).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule("background-color", "transparent");
+  expect(tree).toHaveStyleRule("background", "transparent");
 });
