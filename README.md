@@ -1,3 +1,20 @@
+Test notes:
+
+The test requirements which asked and have been met were:
+
+1) Componentize the Grid Component, so it is reusable - DONE
+2) Rearrange the Beercard layout, ensuring cards stay correct height - DONE
+3) Add type checks - I added 'prop-types' rather than 'type checks' as the code is JS, not Typescript - I did this for ALL components in the project - DONE
+4) Align Grid to the Nav - I was unsure what exactly was meant by this? I asked but did not get a response
+5) Fix the 'Like' button - DONE
+6) Write a test for the button - DONE
+7) Use only Style Components - DONE
+
+BONUS - I also fixed an issue with memory leakage in the originsal app that was affecting performance.
+
+___________________
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
